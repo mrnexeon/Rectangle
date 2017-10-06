@@ -1,15 +1,18 @@
-//
-//  main.cpp
-//  Rectangle
-//
-//  Created by Андрей Архипов on 06.10.2017.
-//  Copyright © 2017 Андрей Архипов. All rights reserved.
-//
-
 #include <iostream>
+#include "Rect.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+
+    Rect r1(0, 0, 1, 2);
+    
+    Rect r2(1, 1, 2, 3);
+    
+    Rect r3 = r2.MinRect(r1);
+    
+    std::cout << r3.getMin().x << " "
+            << r3.getMin().y << " "
+            << r3.getMax().x << " "
+            << r3.getMax().y << std::endl;
+
     return 0;
 }
